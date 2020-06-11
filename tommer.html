@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>Tommer beregner</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!--Her starter Styles-->
+        <style>
+            body,html {
+                display:block;
+                width:100%;
+                margin:0;
+                padding:0;
+            }
+            form {
+                background-image: url("http://mari24h04.apache.eadania.dk/wp-content/uploads/2020/06/baghjulgrund1.png");
+                display: block;
+                box-sizing: border-box;
+                margin: auto;
+                padding:20px 0px;
+                width:100%;
+                max-width: 600px;
+                border-radius: 25px;
+                box-shadow: 10px 10px 5px grey;
+            }
+            #skridt{
+                width: 70%;
+                text-align: center;
+                border-radius: 25px;
+                display: block;
+                margin: auto;
+                border:black;
+                height: 30px;
+            }
+            .beregn1 {
+                color: white;
+                background-color: #022c80;
+                padding: 5px;
+                border: 0;
+                font-weight: bold;
+                width:45%;
+                border-radius: 25px;
+                font-size: 1em;
+                transition: width 1s;
+                display: block;
+                margin: auto;
+            }
+            .beregn1:hover {
+                font-weight: bold;
+                width: 55%;
+            }
+
+            #steltal, #tommertal {
+                padding: 2px;
+                color: black;
+                width: 40%;
+                height: 40px;
+                background-color: white;
+                border-radius:50px;
+                border:2px solid black;
+                display: block;
+                margin: auto;
+                font-size: 1.3em;
+                       
+            }
+
+            #grid{
+                display: grid;
+                grid-template-columns: 2fr 2fr;
+                grid-template-rows: 1fr 3fr;
+                grid-template-areas: 
+                "a a"
+                "b c";            
+            }
+            #overskrift{
+                grid-area: a;
+                text-align: center;
+color: white;
+            }
+            #beregning{
+                grid-area: b;
+                font-size: 1.5em;
+                
+                
+            }
+            #svarene{
+                text-align: center;
+                grid-area: c;
+color: white;
+            }
+           
+        </style>
+        <!--Her slutter styles-->
+    </head>
+    <body> <!--Her starte Tommer beregner-->
+        <form id="grid">
+            <h2 id="overskrift">Tommer Beregner</h2>
+            <div id=beregning>
+<br>            
+<input id="skridt" type="text" placeholder="Din skridtlængde i cm" />
+            
+            <br>
+            <input class = "beregn1" type="button"  value="Beregn" onclick="bmi()" />
+        </div>
+        <div id="svarene">
+            <p>Dit stelstørrelse er:</p>
+            <p id="steltal">0</p>
+<br>
+            <p>Tommerne på din cykel er:</p>
+            <p id="tommertal">0</p>
+        </div>
+        </form>
+    </body> <!--Her slutter Tommer beregner-->
+</html>
+<!--Her starter JavaScript-->
+<script> 
+function bmi() {
+var skridt = Number(document.getElementById("skridt").value); //Henter skridtlængden ned
+var stel = skridt * 0.61; // Beregning af stel nr.
+var tommer = stel / 2.54; // Beregning af tommer
+var stel1 = stel.toFixed(2); // Afrunder Dicimaler på stel nr. til 2
+var tommer1 = tommer.toFixed(0); //Afrunder Dicimaler på Tommer til 0
+document.getElementById("steltal").innerHTML = stel1 + "cm"; //Vis Stel nr.
+document.getElementById("tommertal").innerHTML = tommer1 + "&rdquo;" // Vis tommer
+}
+</script>
+<!--Her Slutter JavaScript-->
