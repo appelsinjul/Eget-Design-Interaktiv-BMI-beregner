@@ -1,0 +1,199 @@
+/*---Mobile----*/
+/*-----------Header styles-----------*/
+header{
+    border-top:solid 20px #022c80;
+}
+
+#knap /*--Tilbage knap ---*/
+{
+    color: white;
+    background-color: #022c80;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+    font-size: 1em;
+    margin:8px 20px;
+    border-radius: 25px;
+}
+/*-------Header styles slut-------*/
+
+/*----------Overskrifter----------*/
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+/*-----Overskrifter slutter---------*/
+
+/*-----Design af indhold-------*/
+p{
+    font-family: 'Merriweather', serif;
+    }
+.indhold{
+    margin: 0px 50px;
+}
+body{
+    margin: 0px;
+}
+#bmi-gruppe{
+    display: block;
+    margin: auto;
+    width: 300px;
+}
+/*----Slut design af indhold-----*/
+
+/*--------BMI-Beregner styles-------*/
+form {
+    background-image: url("http://mari24h04.apache.eadania.dk/wp-content/uploads/2020/06/baghjulgrund1.png");
+    display: block;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 20px 0px;
+    width:100%;
+    max-width: 600px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px grey;
+}
+form p{
+    font-family: 'Merriweather', serif;
+
+    color:white;
+    text-align: center;
+}
+.indtast /*--Indtast af Højde og Vægt--*/
+{
+    width: 70%;
+    text-align: center;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+    border:black;
+    height: 30px;
+}
+.beregn /*--Beregn knappen--*/
+{
+    color: white;
+    background-color: #022c80;
+    padding: 5px;
+    border: 0;
+    font-weight: bold;
+    width:45%;
+    border-radius: 25px;
+    transition: width 1s;
+    display: block;
+    margin: auto;
+    font-size: 1.4em;
+}
+.beregn:hover {
+    
+    font-weight: bold;
+    width: 55%;
+}
+
+#result /*--Felte hvor BMI'en kommer til at står--*/ 
+{
+    padding: 2px;
+    color: black;
+    width: 40%;
+    height: 40px;
+    background-color: white;
+    border-radius:50px;
+    border:2px solid black;
+    display: block;
+    margin: auto;
+    font-size: 1.3em;
+}
+/*----Grid i BMI-Beregnerne----*/
+/*--
+Gridet er sat op i en kasse med fire felter
+-Overskriften deler de to øvereste.
+-Beregning er den ene side, den side hvor man skal taste højde og vægt ind i og trykke på beregn. 
+-Svar er så den anden side, hvor BMI tallet vil dukke op
+--*/
+#grid-bmi{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+    "a a"
+    "b c";    
+}
+#overskrift
+{
+    grid-area: a;
+    color:white;
+    text-align: center;
+}
+
+#beregning{
+    grid-area: b;
+}
+
+#svar{
+    grid-area: c;
+    text-align: center;
+    color: white;
+}
+/*----Grid slutter----*/
+/*----BMI-Beregner styles slutter----*/
+
+/*------Footer------*/
+footer{
+    color: white;
+    background-color: #B4061F;
+    height: 60px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+/*------Footer slutter----*/
+
+/*---Tablet---*/
+@media only screen and (min-width: 600px){
+
+    /*-----------Header styles-----------*/
+#knap /*--Tilbage knap ---*/
+{
+    color: white;
+    background-color: #022c80;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+    font-size: 1.2em;
+    margin:8px 20px;
+    border-radius: 25px;
+}
+/*-------Header styles slut-------*/
+
+/*-----Design af indhold-------*/
+
+.indhold{
+    margin: 0px 100px;
+}
+
+#bmi-gruppe{
+    width: 500px;
+}
+/*----Slut design af indhold-----*/
+}
+
+
+@media only screen and (min-width: 768px) {
+
+/*-----Design af indhold-------*/
+
+.indhold{
+    margin: 0px 400px;
+}
+body{
+    margin: 0px;
+}
+#bmi-gruppe{
+    display: block;
+    margin: auto;
+    width: 600px;
+}
+/*----Slut design af indhold-----*/
+}
+
+

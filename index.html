@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <script src="function.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <header>
+        <a href="http://mari24h04.apache.eadania.dk/kom-godt-igang/" class="button" id="knap"><!--Tilbage knappen-->
+            &#8810; Tilbage til Kom godt igang 
+        </a>
+        <h1>Body Mass Index</h1>
+    </header>
+
+    <body>
+        <div id="alt-indhold">
+        <h3>Hvad er BMI?</h3>
+        <p class="indhold">
+            BMI’en er en beregning af ens kropsfedt, ved hjælp af ens højde og vægt, ud fra den beregning kan man se om man er undervægtig, normal bygning eller overvægtig. 
+            <br>
+            Men vær opmærksom på at BMI-tallet er en indikator og tager derfor ikke hensyn om man f.eks. er Bodybuildere da de har større muskelfedt.
+        </p> <!--indhold slutter-->
+        <br>
+        <h3>Test dit BMI tal</h3>
+            
+        <form id="grid-bmi">
+
+            <h2 id="overskrift">BMI Beregner</h2>
+
+            <div id="beregning">
+                <p>Indtast din vægt i kg</p>
+                <input id="weight" class="indtast" type="text" placeholder="Din vægt i KG" />
+                <br />
+                
+                <p>Indtast din højde i meter</p>
+                <input id="height" class="indtast" type="text" placeholder="Din høje i meter" />
+                <br />
+                
+                <input class = "beregn" type="button"  value="Beregn" onclick="bmi()" />
+            </div><!--Begning slutter-->
+
+            <div id="svar">
+                <p>Dit BMI er</p>
+                <p id="result">0</p>
+            </div><!--Svar slutter-->
+
+        </form><!--Grid-bmi slutter-->
+        <h3>Hvordan så det ud?</h3>
+        <p class="indhold">
+            Du kan tjekke på billedet nedenunder her, men selvom om at BMI er for høj eller for lav, kan Nr. Søby Cykelklub være dig til hjælp. Som overvægtig hjælper de dig ned i vægt, med træning to gange om ugen, hvor du både vil komme godt i form og få en masse nye bekendtskaber 
+        </p>
+        <br>
+        <img src="BMI.png" alt="Billede af bmi grupperne" id="bmi-gruppe">
+    </div>
+    </body>
+    <footer>
+        <p>&#169; Design og kodet af Mie, Maria og Lotte</p>
+    </footer>
+</html>
